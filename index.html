@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css">
+  <link href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+  <link href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.rtl.min.css" rel="stylesheet" type="text/css" />
+  <link href="http://cdn.kendostatic.com/2013.3.1119/styles/kendo.metro.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+ 
+  <!-- Header -->
+  <div class="navbar navbar-inverse" ng-controller="NavCtrl">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+    <div class="navbar-collapse collapse navbar-inverse-collapse">
+      <ul class="nav navbar-nav">
+        <li ng-click="setActiveView('view1')" ng-class="{active: activeView == 'view1'}"><a ui-sref="view1">View 1</a></li>
+        <li ng-click="setActiveView('view2')" ng-class="{active: activeView == 'view2'}"><a ui-sref="view2">View 2</a></li>
+        
+      </ul>
+      <form class="navbar-form navbar-left">
+        <input type="text" class="form-control col-lg-8" placeholder="{{activeView}}">
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li ng-click="setActiveView('view3')"><a ui-sref="view3">View 3</a></li>
+            <li ng-click="setActiveView('view4')"><a ui-sref="view4">View 4</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Dropdown header</li>
+            <li ng-click="setActiveView('view5')"><a ui-sref="view5">View 5</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- /Header -->
+
+  <!-- Views -->
+  <div class="container" ui-view></div>
+
+  <!-- Author -->
+  <p class="author">This seed app is authored by: <span app-author></span></p>
+
+  <script src="bower_components/requirejs/require.js" data-main="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "angularjs + requirejs + ui-router + angular-kendo",
+  "version": "0.0.1",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "lib"
+  ],
+  "dependencies": {
+    "angular": "~1.0.5",
+    "angular-ui-router": "~0.2.10",
+    "angular-bootstrap": "~0.10.0",
+    "requirejs": "~2.1.11",
+    "requirejs-domready": "~2.0.1",
+    "angular-kendo-ui": "~1.0.0",
+    "jquery": "~1.9.1"
+  }
+}
