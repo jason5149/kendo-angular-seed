@@ -23,22 +23,22 @@
     </div>
     <div class="navbar-collapse collapse navbar-inverse-collapse">
       <ul class="nav navbar-nav">
-        <li ng-click="setActiveView('view1')" ng-class="{active: activeView == 'view1'}"><a ui-sref="view1">View 1</a></li>
-        <li ng-click="setActiveView('view2')" ng-class="{active: activeView == 'view2'}"><a ui-sref="view2">View 2</a></li>
+        <li ng-class="{active: $state.current.name == 'view1'}"><a ui-sref="view1">View 1</a></li>
+        <li ng-class="{active: $state.current.name == 'view2'}"><a ui-sref="view2">View 2</a></li>
         
       </ul>
       <form class="navbar-form navbar-left">
-        <input type="text" class="form-control col-lg-8" placeholder="{{activeView}}">
+        <input type="text" class="form-control col-lg-8" placeholder="Current State" value="{{$state.current.name}}">
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li ng-click="setActiveView('view3')"><a ui-sref="view3">View 3</a></li>
-            <li ng-click="setActiveView('view4')"><a ui-sref="view4">View 4</a></li>
+            <li><a ui-sref="view3">View 3</a></li>
+            <li><a ui-sref="view4">View 4</a></li>
             <li class="divider"></li>
             <li class="dropdown-header">Dropdown header</li>
-            <li ng-click="setActiveView('view5')"><a ui-sref="view5">View 5</a></li>
+            <li><a ui-sref="view5">View 5</a></li>
           </ul>
         </li>
       </ul>

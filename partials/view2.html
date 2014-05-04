@@ -1,1 +1,20 @@
-<p>This is the partial for view 2.</p>
+<p>
+	<input kendo-auto-complete k-options="fruitOptions" ng-model="fruit" style="width: 500px;">
+	<span>You inputed: {{fruit}}</span>
+</p>
+
+<p>
+	<button type="button" kendo-button k-on-click="buttonClicked()">Click Me</button>
+	<span>Click counter: {{buttonCounter}}</span>
+</p>
+
+<p>
+	<select kendo-drop-down-list k-options="thingsOptions" ng-model="thing"></select>
+	<span>You selected: {{thing}}</span>
+</p>
+
+<p>
+	<input kendo-date-picker ng-model="datePickerAsString" k-ng-model="datePickerAsDate" />
+	<span>ng-model: {{datePickerAsString}}</span>
+	<span>k-ng-model: {{datePickerAsDate}}</span>
+</p>

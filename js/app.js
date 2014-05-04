@@ -19,7 +19,12 @@ define([
         'app.controllers',
         'app.filters',
         'app.directives'
-    ]);   
+    ]);
+
+    app.run(function($rootScope, $state, $stateParams){
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+    });
 
     return app;
 });
